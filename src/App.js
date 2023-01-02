@@ -11,6 +11,7 @@ import { DemoProvider } from "./demo-context/context";
 import UseCallBackDemo from "./demo-hook/UseCallbackDemo";
 import { TodoProvider } from "./excercise/context/todo-context";
 import { TodoApp } from "./excercise/todo-app";
+import HttpRequestDemo from "./http-request-demo/HttpRequestDemo";
 import { ReactRouterDemoApp } from "./react-router/ReactRouterDemoApp";
 
 function App() {
@@ -29,9 +30,10 @@ function App() {
     // <TodoProvider>
     //   <TodoApp />
     // </TodoProvider>
-    <BrowserRouter>
-      <ReactRouterDemoApp />
-    </BrowserRouter>
+    // <BrowserRouter>
+    //   <ReactRouterDemoApp />
+    // </BrowserRouter>
+    <HttpRequestDemo />
   );
 }
 
