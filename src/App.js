@@ -1,39 +1,12 @@
-import { BrowserRouter } from "react-router-dom";
-import "./App.css";
-import {
-  Circle,
-  Rectangle,
-  Square,
-  Star,
-} from "./custom-hook-demo/CustomHookDemo";
-import Content from "./demo-context/content/Content";
-import { DemoProvider } from "./demo-context/context";
-import UseCallBackDemo from "./demo-hook/UseCallbackDemo";
-import { TodoProvider } from "./excercise/context/todo-context";
-import { TodoApp } from "./excercise/todo-app";
-import HttpRequestDemo from "./http-request-demo/HttpRequestDemo";
-import { ReactRouterDemoApp } from "./react-router/ReactRouterDemoApp";
+import { Provider } from "react-redux";
+import { rootStore } from "./http-request-demo/store";
+import Content from "./redux-demo/ui/content/Content";
 
 function App() {
   return (
-    // <DemoProvider>
-    //   <Content />
-    // </DemoProvider>
-
-    // <UseCallBackDemo />
-    // <>
-    //   <Square></Square>
-    //   <Circle />
-    //   <Rectangle />
-    //   <Star />
-    // </>
-    // <TodoProvider>
-    //   <TodoApp />
-    // </TodoProvider>
-    // <BrowserRouter>
-    //   <ReactRouterDemoApp />
-    // </BrowserRouter>
-    <HttpRequestDemo />
+    <Provider store={rootStore}>
+      <Content />
+    </Provider>
   );
 }
 
